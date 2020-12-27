@@ -1,0 +1,282 @@
+{
+    "data": [{
+            "d_date": "2020-09-07",
+            "n_value": 2600000.00,
+            "i_status": 1,
+            "documento": "FVE8",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-12",
+            "n_value": 2600000.00,
+            "i_status": 1,
+            "documento": "FE6",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-04",
+            "n_value": 2600000.00,
+            "i_status": 1,
+            "documento": "FE2",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-07",
+            "n_value": 237600.00,
+            "i_status": 1,
+            "documento": "FVE1516",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-10",
+            "n_value": 82800.00,
+            "i_status": 1,
+            "documento": "FVE1517",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-07",
+            "n_value": 2600000.00,
+            "i_status": 2,
+            "documento": "DETP990000002",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-07",
+            "n_value": 2600000.00,
+            "i_status": 32,
+            "documento": "FVE9",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 83300.00,
+            "i_status": 9,
+            "documento": "SETP990000009",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-30",
+            "n_value": 33000.00,
+            "i_status": 1,
+            "documento": "FVE1508",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-10-06",
+            "n_value": 82800.00,
+            "i_status": 32,
+            "documento": "SETP990000019",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-06",
+            "n_value": 36500.00,
+            "i_status": 11,
+            "documento": "FVE1514",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-06",
+            "n_value": 414000.00,
+            "i_status": 11,
+            "documento": "FVE1515",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-10-05",
+            "n_value": 238000.00,
+            "i_status": 11,
+            "documento": "SETP990000018",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 476000.00,
+            "i_status": 9,
+            "documento": "SETP990000010",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 79200.00,
+            "i_status": 32,
+            "documento": "SETP990000015",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-05",
+            "n_value": 2600000.00,
+            "i_status": 32,
+            "documento": "SETP990000004",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-10-05",
+            "n_value": 175200.00,
+            "i_status": 11,
+            "documento": "SETP990000016",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-10-05",
+            "n_value": 87600.00,
+            "i_status": 11,
+            "documento": "SETP990000017",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-28",
+            "n_value": 18250.00,
+            "i_status": 1,
+            "documento": "FVE1507",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-01",
+            "n_value": 438000.00,
+            "i_status": 11,
+            "documento": "FVE1511",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-01",
+            "n_value": 21900.00,
+            "i_status": 1,
+            "documento": "FVE1512",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-30",
+            "n_value": 1051200.00,
+            "i_status": 1,
+            "documento": "FVE1510",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-01",
+            "n_value": 237600.00,
+            "i_status": 11,
+            "documento": "FVE1513",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 87600.00,
+            "i_status": 9,
+            "documento": "SETP990000011",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 79200.00,
+            "i_status": 9,
+            "documento": "SETP990000008",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-08-30",
+            "n_value": 438000.00,
+            "i_status": 32,
+            "documento": "FVE1509",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-10-06",
+            "n_value": 82800.00,
+            "i_status": 7,
+            "documento": "SETP990000020",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-10",
+            "n_value": 165600.00,
+            "i_status": 9,
+            "documento": "SETP990000005",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-10",
+            "n_value": 175200.00,
+            "i_status": 9,
+            "documento": "SETP990000001",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 82800.00,
+            "i_status": 9,
+            "documento": "SETP990000014",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        },
+        {
+            "d_date": "2020-09-21",
+            "n_value": 82800.00,
+            "i_status": 9,
+            "documento": "SETP990000012",
+            "cliente": "PEREZ MUÑOZ FABIAN DAVID14797223",
+            "id": 0,
+            "supplier": 0
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+<div id="search-wrapper">
+    <input type="text" id="search" pInputText placeholder="Buscar" (input)="dt.filterGlobal($event.target.value, 'contains')">
+    <i class="pi pi-search"></i>
+</div>
+<br><br><br><br>
+
+<div class="card">
+
+
+    <p-table #dt [columns]="cols" [value]="emisores" [globalFilterFields]="['v_name']" [rows]="10" [paginator]="true" [rowHover]="true">
+
+
+        <ng-template pTemplate="caption">
+
+            <!-- <div id="search-wrapper" style="text-align: left">        
+				<i class="pi pi-search" style="margin:10px 4px 0 0"></i>
+				<input  id="search" type="text" pInputText  placeholder="Buscar" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+			</div> -->
+
+            <br><br>
+            <!-- <div id="search-wrapper">        
+				
+				<input type="text"   id="search" pInputText placeholder="Buscar" (input)="dt.filterGlobal($event.target.value, 'contains')" >
+				<i class="pi pi-search"></i>
+			</div> -->
+
+            <div class="p-d-flex p-ai-center p-jc-between">
+                <b><h3 class="p-m-0">Emisores</h3></b>
+
+
+            </div>
+
+        </ng-template>
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">Nombre
+                    <p-sortIcon field="v_name"></p-sortIcon>
+                    <th pSortableColumn="name">Nit
+                        <p-sortIcon field="i_nit"></p-sortIcon>
+                    </th>
+                    <th [ngStyle]="{'width': '10%'}"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-emisor>
+            <tr>
+                <td>{{emisor.v_name}}</td>
+                <td>{{emisor.i_nit}}</td>
+                <td style="text-align:right">
+                    <button pButton pRipple icon="pi pi-pencil" routerLink="emisores/{{emisor.id}}" class="p-button-rounded p-button-success p-mr-2" style="margin-right: .5em"></button>
+                    <button pButton pRipple icon="pi pi-trash" (click)="deleteEmisor(emisor)" class="p-button-rounded p-button-warning"></button>
+                </td>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="summary">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                En total hay {{emisores ? emisores.length : 0 }} emisores.
+            </div>
+
+            <br><br>
+
+            <div style="text-align:center">
+                <button type="button" pButton icon="fa fa-plus" routerLink="emisores" label="Agregar"></button>
+
+            </div>
+
+        </ng-template>
+        <!-- <ng-template pTemplate="summary" let-rowData>
+			<div style="text-align:center">
+				<button type="button" pButton icon="fa fa-plus" routerLink="emisores" label="Agregar"></button>
+			</div>
+		</ng-template>   -->
+
+    </p-table>
+</div>

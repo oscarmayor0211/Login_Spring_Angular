@@ -1,0 +1,312 @@
+<br>
+
+
+<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+    <div class="ui-g ui-fluid">
+
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <input formControlName="id" pInputText type="hidden" />
+            </div>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input  class="form-control" [class.is-invalid]="nombreValida" formControlName="v_name" type="text"  pInputText> 
+        <label for="float-input">Nombre</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="nombreValida"></p-message>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input class="form-control" [class.is-invalid]="nitValida" formControlName="i_nit" type="text" pInputText> 
+        <label for="float-input">NIT</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="nitValida"></p-message>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input class="form-control" [class.is-invalid]="direccionValida" formControlName="v_address" type="text" pInputText> 
+        <label for="float-input">Dirección</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="direccionValida"></p-message>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input class="form-control" [class.is-invalid]="ciudadValida" formControlName="v_city" type="text" pInputText> 
+        <label for="float-input">Ciudad</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="ciudadValida"></p-message>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input class="form-control" [class.is-invalid]="telefonoValida" formControlName="v_telephone" type="number" pInputText> 
+        <label for="float-input">Telefóno</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="telefonoValida"></p-message>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <span class="ui-float-label">
+        <input class="form-control" [class.is-invalid]="emailValida" formControlName="v_email" type="text" pInputText> 
+        <label for="float-input">Email</label>
+      </span>
+            <p-message severity="error" text="Este campo es requerido" *ngIf="emailValida"></p-message>
+        </div>
+    </div>
+
+    <p-panel header="Datos fiscales">
+        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" text-align="center" style="margin: 10px 0px">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Act. Economica:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="actividad_ecoValida" pInputText type="text" formControlName="v_industry_clasification" />
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="actividad_ecoValida"></p-message>
+                </div>
+
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Del. Tributario:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="detalles_tribuValida" pInputText type="text" formControlName="v_tax_level_code" />
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="detalles_tribuValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Resp. Fiscales:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="responsabilidad_fiscalValida" pInputText type="text" formControlName="v_tax_list">
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="responsabilidad_fiscalValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Certificado:
+                </div>
+                <div class="ui-grid-col-2">
+                    <<<<<<< HEAD <p-fileUpload formControlName="certificado" chooseLabel="Cargar certificado" mode="basic" accept=".pfx" (onSelect)="onBasicUpload($event)">
+                        </p-fileUpload>
+                        =======
+                        <p-fileUpload formControlName="file" chooseLabel="Cargar certificado" mode="basic" accept=".PFX" (onSelect)="onBasicUpload($event)"></p-fileUpload>
+                        >>>>>>> 71356a05b0152cff54f986c55caaef31eb98b016
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Contraseña Ce:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="contrasena_ceValida" pInputText type="text" formControlName="v_passsword">
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="contrasena_ceValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Software ID:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="id_softwareValida" pInputText type="text" formControlName="v_sw_id">
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="id_softwareValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Pin:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="pin_softwareValida" pInputText type="text" formControlName="v_sw_pin">
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="pin_softwareValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    Nombre de Software:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input class="form-control" [class.is-invalid]="nombre_softwareValida" pInputText type="text" formControlName="v_sw_name">
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Este campo es requerido" *ngIf="nombre_softwareValida"></p-message>
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_level" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="c_dv" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="v_contact" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="v_signature" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="v_sw_key" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_contract_available" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_file_server" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_entity_outbox" pInputText type="hidden" />
+                </div>
+            </div>
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_file_outbox" pInputText type="hidden" />
+                </div>
+            </div>
+
+
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <input formControlName="i_email_outbox" pInputText type="hidden" />
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <!-- <p-button  class="ui-button-rounded" style="height:30px;width:120px" type="submit" icon="pi pi-check" label="Guardar"></p-button>&nbsp; -->
+                <button style="height:30px;width:120px" pButton type="submit" label="Guardar" class="ui-button-rounded" icon="pi pi-check"></button>&nbsp;
+                <button style="height:30px;width:120px" pButton type="button" routerLink="/admin/configuraciones" label="Cancelar" class="ui-button-rounded ui-button-danger" icon="pi pi-times"></button>
+            </div>
+
+        </div>
+    </p-panel>
+</form>
+
+<hr>
+<pre>
+  Estado del formulario: {{ userform.valid }}
+  <br>
+  Status: {{ userform.status }}
+</pre>
+
+<pre>
+
+  {{ userform.value | json }}
+
+</pre>
+
+
+<br>
+
+<div class="card" *ngIf="id">
+
+    <div id="search-wrapper">
+        <input type="text" id="search" pInputText placeholder="Buscar" (input)="dt.filterGlobal($event.target.value, 'contains')">
+        <i class="pi pi-search"></i>
+    </div>
+    <br><br><br><br>
+    <p-table #dt [value]="resolu" [globalFilterFields]="['v_resoluction']" [rows]="5" [paginator]="true" [rowHover]="true">
+        <ng-template pTemplate="caption">
+
+
+            <br><br>
+            <div class="p-d-flex p-ai-center p-jc-between">
+                <strong>
+					<h3 class="p-m-0">Resoluciones</h3>
+				</strong>
+            </div>
+            <!-- <div style="text-align: right">        
+				<i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+				<input type="text" pInputText size="25" placeholder="Buscar" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+			</div> -->
+        </ng-template>
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">Resolucion
+                    <p-sortIcon field="v_resoluction"></p-sortIcon>
+                </th>
+                <th pSortableColumn="name">Tipo
+                    <p-sortIcon field="i_type"></p-sortIcon>
+                </th>
+                <th [ngStyle]="{'width': '10%'}"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-resolu>
+            <tr>
+                <td>{{resolu.v_resoluction}}</td>
+                <td>{{resolu.i_type}}</td>
+                <td style="text-align:right">
+                    <button pButton pRipple icon="pi pi-pencil" routerLink="resoluciones/{{resolu.s_id}}" class="p-button-rounded p-button-success p-mr-2" style="margin-right: .5em"></button>
+                    <button pButton pRipple icon="pi pi-trash" (click)="deleteResolucion(resolu)" class="p-button-rounded p-button-warning"></button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                En total hay {{resolu ? resolu.length : 0 }} resoluciones.
+            </div>
+            <br><br>
+            <div style="text-align:center">
+                <button type="button" pButton icon="fa fa-plus" routerLink="resoluciones" label="Agregar"></button>
+            </div>
+        </ng-template>
+        <!-- <ng-template pTemplate="summary" let-rowData>
+			<div style="text-align:center">
+				<button type="button" pButton icon="fa fa-plus" routerLink="resoluciones" label="Agregar"></button>
+			</div>
+		</ng-template>   -->
+    </p-table>
+</div>

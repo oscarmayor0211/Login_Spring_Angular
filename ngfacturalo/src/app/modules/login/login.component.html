@@ -1,0 +1,113 @@
+<!-- <div class="page">
+    <div class="container">
+        <div class="left">
+            <div class="eula"></div>
+        </div>
+        <div class="right">
+            <div class="login">Facturalo</div>
+
+            <svg viewBox="0 0 330 300">
+          <defs>
+            <linearGradient
+                            inkscape:collect="always"
+                            id="linearGradient"
+                            x1="13"
+                            y1="193.49992"
+                            x2="307"
+                            y2="193.49992"
+                            gradientUnits="userSpaceOnUse">
+              <stop
+                    style="stop-color:#ff00ff;"
+                    offset="0"
+                    id="stop876" />
+              <stop
+                    style="stop-color:#ff0000;"
+                    offset="1"
+                    id="stop878" />
+            </linearGradient>
+          </defs>
+          <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+        </svg>
+            <form class="forma" [formGroup]="formulario" (ngSubmit)="ingresar()">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" [class.is-invalid]="emailInvalid">
+                    <small *ngIf="emailInvalid" class="text-danger">Ingrese un email valido</small>
+                </div>
+                <div>
+
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" formControlName="password" [class.is-invalid]="passwordInvalid">
+                    <small *ngIf="passwordInvalid" class="text-danger">Ingrese una constraseña</small>
+                </div>
+                <input type="submit" id="submit" value="Ingresar" routerLink="/admin/dashboard">
+            </form>
+        </div>
+    </div>
+</div> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Facturalo </title>
+
+    <link id="theme-css" rel="stylesheet" type="text/css" href="../../../assets/theme/indigo/theme-light.css">
+    <link id="layout-css" rel="stylesheet" type="text/css" href="../../../assets/layout/css/layout-indigo.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../assets/pages/primeng.min.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-image">
+        <div class="login-panel">
+            <img src="../../../assets/layout/images/84224d5ca2a16f5c048b40cabc4c9f46371d8bfcd73e0c6cedfe20e5.png" alt="ecuador-layout" />
+            <div class="log">Facturalo</div>
+            <form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="ingresar()" id="loginform">
+                <div class="ui-g-12">
+
+                    <div class="input-wrapper">
+                        <input type="text" formControlName="user" placeholder="Usuario" class="ui-inputtext ui-widget" [class.is-invalid]="usuarioInvalid">
+                        <small *ngIf="usuarioInvalid" class="text">Ingrese un usuario valido</small>
+                    </div>
+                </div>
+                <div class="ui-g-12">
+                    <div class="input-wrapper">
+                        <input type="password" formControlName="pwd" placeholder="Contraseña" class="ui-inputtext ui-widget" [class.is-invalid]="passwordInvalid">
+                        <small *ngIf="passwordInvalid" class="text">Ingrese una constraseña</small>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+
+                    <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                            <span class="ui-button-text ui-c">Login</span>
+                        </button>
+                </div>
+
+                <div class="separator"></div>
+
+                <a [routerLink]="['/forgotPassword']" class="subinfo">
+                    <span>¿Olvidaste tu contraseña?</span>
+                </a>
+
+                <p class="subinfo">V1.0</p>
+
+            </form>
+
+        </div>
+        <div class="msj">
+            <p>Facturas electrónicas simples, rápidas y seguras</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

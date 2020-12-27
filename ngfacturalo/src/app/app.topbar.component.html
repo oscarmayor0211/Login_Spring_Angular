@@ -1,0 +1,55 @@
+<div class="layout-topbar">
+
+
+    <div class="search-input">
+        <img src="assets/layout/images/image.png" alt="logo-facturalo">
+    </div>
+
+    <!-- <a href="/" class="logo-container">
+        <img src="assets/layout/images/ecuador-logo.png" alt="ecuador-layout" />
+    </a> -->
+
+    <a id="topbar-profile-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
+        <span>Jeniffer Reynolds</span>
+        <img src="assets/layout/images/avatar.png" alt="ecuador-layout" class="topbar-profile" />
+        <i class="fa fa-sort-desc"></i>
+    </a>
+
+    <ul id="topbar-usermenu" class="fadeInDown animated" [ngClass]="{'usermenu-active': app.topbarMenuActive}">
+        <li>
+            <a href="#" (click)="app.onTopbarSubItemClick($event)">
+                <i class="fa fa-fw fa-user"></i>
+                <span class="topbar-item-name">Perfil</span>
+                <!-- <span class="topbar-submenuitem-badge">4</span> -->
+            </a>
+
+     
+
+            <a href="#" (click)="app.onTopbarSubItemClick($event)">
+                <i class="fa fa-fw fa-user"></i>
+                <span class="topbar-item-name" routerLink="/login">Cerrar sesión</span>
+                <!-- <span class="topbar-submenuitem-badge">4</span> -->
+            </a>
+        </li>
+        <li #settings [ngClass]="{'menuitem-active':app.activeTopbarItem === settings}">
+            <a href="#" (click)="app.onTopbarItemClick($event, settings)">
+                <i class="fa fa-fw fa-cog"></i>
+                <span class="topbar-item-name">Emisores</span>
+                <span class="topbar-submenuitem-badge">{{emisores ? emisores.length : 0 }}</span>
+            </a>
+            <ul>
+                <li  *ngFor="let emisor of emisores" role="menuitem">
+                    <a href="#" (click)="app.onTopbarSubItemClick($event)">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span>{{emisor.v_name}}</span>
+                    </a>
+                </li>
+               
+            </ul>
+        </li>
+
+    </ul>
+
+
+
+</div>

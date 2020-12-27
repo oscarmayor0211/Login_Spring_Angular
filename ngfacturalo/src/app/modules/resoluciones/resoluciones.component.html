@@ -1,0 +1,119 @@
+<form [formGroup]="userform" (ngSubmit)="onSubmit()" >
+  <p-panel header="Resoluciones">
+      <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" text-align="center" style="margin: 10px 0px">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">
+              <input  formControlName="s_id" pInputText type="hidden" />
+          </div>
+      </div>  
+
+        <div class="ui-grid-row">
+              <div class="ui-grid-col-2">
+                  Resolución:
+              </div>
+              <div class="ui-grid-col-6">
+                  <input class="form-control" [class.is-invalid]="resolucionValida" formControlName="v_resoluction" pInputText type="text" >
+                  <p-message  severity="error" text="Este campo es requerido" *ngIf="resolucionValida"></p-message>
+              </div>
+          </div>
+          <div class="ui-grid-row">
+              <div class="ui-grid-col-2">
+                  Tipo:
+              </div>
+              <div class="ui-grid-col-4">
+                <p-dropdown class="form-control" [class.is-invalid]="tipoValida" [options]="tipos" formControlName="i_type" [showClear]="true"></p-dropdown>
+                <p-message  severity="error" text="Este campo es requerido" *ngIf="tipoValida"></p-message>
+              </div>
+          </div>
+
+          <div class="ui-grid-row">
+            <div class="ui-grid-col-2">
+              Clase de documento:
+          </div>
+          <div class="ui-grid-col-4">
+            <p-dropdown class="form-control" [class.is-invalid]="claseValida" [options]="clases" formControlName="i_class" [showClear]="true"></p-dropdown>
+            <p-message  severity="error" text="Este campo es requerido" *ngIf="claseValida"></p-message>
+          </div>
+          </div>
+
+           
+          
+
+          <div class="ui-grid-row">
+              <div class="ui-grid-col-2">
+                  Prefijo
+              </div>
+              <div class="ui-grid-col-2">
+                  <input class="form-control" [class.is-invalid]="prefijoValida" pInputText type="text" formControlName="v_prefix" />
+                  <p-message  severity="error" text="Este campo es requerido" *ngIf="prefijoValida"></p-message>
+              </div>
+            
+          </div>
+
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-2">
+            Numero Inicial:
+          </div>
+          <div class="ui-grid-col-2">
+              <input class="form-control" [class.is-invalid]="numInicialValida" pInputText type="number" formControlName="i_num_begin" />
+              <p-message  severity="error" text="Este campo es requerido" *ngIf="numInicialValida"></p-message>
+          </div>
+
+          <div class="ui-grid-col-2">
+            Numero Final: 
+          </div>
+          <div class="ui-grid-col-2">
+              <input class="form-control" [class.is-invalid]="numFinalValida" pInputText type="number" formControlName="i_num_end" />
+              <p-message  severity="error" text="Este campo es requerido" *ngIf="numFinalValida"></p-message>
+          </div>
+        </div>
+
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-2">
+            Fecha Inicial:
+          </div>
+          <div class="ui-grid-col-2">
+            <p-calendar class="form-control" [class.is-invalid]="fechaIniValida" formControlName="d_date" [locale]="es" [showIcon]="true" dateFormat="yy-mm-dd"></p-calendar>
+            <!-- <p-calendar  class="form-control" [class.is-invalid]="fechaIniValida" [showIcon]="true" dateFormat="yy-mm-dd" formControlName="d_date"></p-calendar> -->
+            <p-message  severity="error" text="Este campo es requerido" *ngIf="fechaIniValida"></p-message>
+          </div>
+
+          <div class="ui-grid-col-2">
+            Fecha Final: 
+          </div>
+          <div class="ui-grid-col-2">
+            <p-calendar class="form-control" [class.is-invalid]="fechaFinalValida" [showIcon]="true" dateFormat="yy-mm-dd" [locale]="es" formControlName="d_expiry" ></p-calendar>
+            <p-message  severity="error" text="Este campo es requerido" *ngIf="fechaFinalValida"></p-message>
+          </div>
+        </div>
+
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Llave Tecnica:
+      </div>
+      <div class="ui-grid-col-6">
+          <input class="form-control" [class.is-invalid]="llaveTecValida" pInputText type="text" formControlName="v_tec_key"/>
+          <p-message  severity="error" text="Este campo es requerido" *ngIf="llaveTecValida"></p-message>
+      </div>
+      </div>
+
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-6">
+            <input  formControlName="i_supplier" pInputText type="hidden" />
+        </div>
+    </div>  
+
+      <br>
+
+        <div style="text-align:center">
+          <!-- <p-button type="submit" icon="pi pi-check" label="Guardar"></p-button> -->
+          <button  style="height:30px;width:120px" pButton type="submit" label="Guardar" class="ui-button-rounded" icon="pi pi-check"></button>&nbsp;
+          <button style="height:30px;width:120px" pButton type="button" routerLink="/admin/configuraciones" label="Cancelar" class="ui-button-rounded ui-button-danger" icon="pi pi-times"></button>
+        </div>
+
+    
+     
+
+   </div>
+  </p-panel>
+</form>

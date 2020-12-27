@@ -1,0 +1,40 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-g-6 ui-lg-12">
+        <div class="card">
+            <label for="" class="centerText">Medidor de facturas
+                <kendo-radialgauge [pointer]="{ value: value }" [scale]="{ max: 180 }">
+                </kendo-radialgauge>
+            </label>
+        </div>
+
+    </div>
+</div>
+
+<div class="box01">
+
+    <div class="box02">
+        <label for="" class="factmensual">Facturación Mensual</label>
+        <div class="total">
+            <p> Total : {{total}}</p>
+        </div>
+        <p-chart type="pie" [data]="dataDona" [options]="options2"></p-chart>
+
+    </div>
+    <div class="box03">
+        <div style="margin-top: 100px; ">
+            <p>Selecciona el mes que deseas ver.</p>
+            <table>
+                <tr>
+                    <th>Meses</th>
+
+                </tr>
+                <tr *ngFor="let mes of mess">
+                    <td><a type="button" (click)="getGraficaDona(mes.id)">{{mes.mes}}</a></td>
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- </div> -->

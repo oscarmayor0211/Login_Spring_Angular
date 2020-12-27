@@ -1,0 +1,54 @@
+.centerText {
+    text-align: center;
+    padding: 378px;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+.factmensual {
+    padding-left: 247px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+.medidor {
+    width: 99%;
+    height: 100%;
+    overflow: hidden;
+    left: -0.5px;
+    top: -0.5px;
+}
+
+.total {
+    width: 119px;
+    float: left;
+    font-size: 12px;
+    color: black;
+    padding-left: 17px;
+}
+
+.box01 {
+    width: 95%;
+    /* height: 500%; */
+    border: 1px solid #dddddd;
+    background: white;
+    color: black;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: end;
+}
+
+.box02 {
+    width: 80%;
+    height: 50%;
+}
+
+.box03 {
+    width: 20%;
+    padding: 0 0 0 10px;
+}

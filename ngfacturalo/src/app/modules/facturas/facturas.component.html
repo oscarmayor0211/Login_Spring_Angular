@@ -1,0 +1,82 @@
+<form #formu="ngForm" (ngSubmit)="getFacturaByFiltro()">
+
+    <div id="search-wrapper">
+        <input type="text " id="search" pInputText placeholder="Buscar Cliente" (input)="dt.filterGlobal($event.target.value, 'contains')">
+
+        <i class="pi pi-search"></i>
+
+    </div>
+
+    <br><br>
+
+    <div class="ui-g ui-fluid">
+        <p-fieldset legend="Buscar por fecha" class="fec">
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <label>Fecha Inicial  </label> &nbsp;
+                    <p-calendar [(ngModel)]="fechainicial" [locale]="es" [showIcon]="true" dateFormat="yy-mm-dd" name="fechainicio"></p-calendar>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-4">
+                <div class="ui-inputgroup">
+                    <label class="fe1">Fecha Final  </label>&nbsp;
+                    <p-calendar [(ngModel)]="fechafinal" [locale]="es" [showIcon]="true" dateFormat="yy-mm-dd" name="fechafinal"></p-calendar>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-4">
+                <button class="btnsearch" pButton label="Buscar" type="submit" ng-disabled="formu.invalid"></button>
+            </div>
+        </p-fieldset>
+    </div>
+</form>
+<br><br>
+<div id="htmlData" #htmlData>
+
+    <p-table [value]="fe" [(selection)]="selectedFactura" [columns]="cols" [paginator]="true" selectionMode="multiple" [rows]="10" #dt [globalFilterFields]="['cliente','documento']">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <!-- <th colspan="2" *ngFor="let col of columns">
+                    {{col.header}}
+                </th>
+                <th>Genenerar Pdf</th> -->
+
+                <th colspan="2">Cliente</th>
+                <th>Valor</th>
+                <th>Documento</th>
+                <th>Fecha</th>
+                <th colspan="2">Estado</th>
+                <th>Genenerar Pdf</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns>
+            <tr [pSelectableRow]="rowData">
+                <tr [pSelectableRow]="rowData">
+                    <td colspan="2">{{columns.cliente}}</td>
+                    <td>{{columns.n_value | currency }}</td>
+                    <td>{{columns.documento}}</td>
+                    <td>{{columns.d_date}}</td>
+                    <td colspan="2">
+                        <p-checkbox [value]="columns.i_status" inputId="ny" [ngModel]="columns.documento" binary="true"></p-checkbox>
+                        <label for="ny" *ngIf="columns.i_status == 1"> Registrada</label>
+                        <label for="ny" *ngIf="columns.i_status == 2"> Disponible para envio DIAN</label>
+                        <label for="ny" *ngIf="columns.i_status == 4"> En proceso de envio DIAN</label>
+                        <label for="ny" *ngIf="columns.i_status == 7"> Emision DIAN exitosa</label>
+                        <label for="ny" *ngIf="columns.i_status == 8"> En proceso de creación representacion grafica</label>
+                        <label for="ny" *ngIf="columns.i_status == 9"> Representación gráfica creada exitosamente</label>
+                        <label for="ny" *ngIf="columns.i_status == 10"> En proceso de envío email</label>
+                        <label for="ny" *ngIf="columns.i_status == 11"> Email enviado correctamente</label>
+                        <label for="ny" *ngIf="columns.i_status == 32"> Error</label>
+
+                    </td>
+
+                    <td>
+                        <!-- <button pButton type="button" (click)="dt.exportCSV({selectionOnly:true})" label="Descargar" class="ui-button-rounded"></button> -->
+                        <button pButton type="button" label="Descargar" (click)="descargaZip(columns.documento)" class="ui-button-rounded"></button>
+
+                    </td>
+
+                </tr>
+        </ng-template>
+    </p-table>
+</div>
